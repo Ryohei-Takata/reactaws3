@@ -6,6 +6,7 @@ import { store } from "./app/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import Login from "./features/login/login";
+import Moshikomi from "./features/moshikomi/moshikomi";
 import { Route, BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
@@ -13,7 +14,8 @@ ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
         <Route exact path="/" component={Login} />
-        <Route exact path="/moshikomi/:id" component={App} />
+        <Route exact path="/home/:id" component={App} />
+        <Route exact path="/moshikomi/:id" component={Moshikomi} />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
